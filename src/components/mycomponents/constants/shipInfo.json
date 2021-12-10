@@ -1,0 +1,88 @@
+{
+    "rarity":{
+        "1":"Common", 
+        "2":"Uncommon",
+        "3":"Rare", 
+        "4":"Epic", 
+        "5":"Legendary", 
+        "6":"Primordial", 
+        "7":"Resource"
+    },
+    "category":{
+        "1":"Attacker",
+        "2":"Gunner",
+        "3":"Bastion",
+        "4":"Fighter",
+        "5":"Infiltrator"
+    },
+    "model":{
+        "11":"TE-21",
+        "12":"TE-21-G",
+        "13":"TB-5 THUNDERBOLT",
+        "14":"TE-21-BE",
+        "15":"TB-20 THUNDER",
+        "16":"TR-2 CYCLOPS",
+        "21":"B-100 CORE",
+        "22":"B-100-S OBLITERATOR",
+        "23":"T-100 TITANIUM MINER",
+        "24":"B-100-M LONGSHOT",
+        "25":"B-100-G LEO",
+        "26":"LOGOS I",
+        "31":"E-200 WORKER",
+        "32":"B-100-SL DEFENDER",
+        "33":"B-100-SLA1 BASTION",
+        "34":"E-200-I WORKER TYPE I",
+        "35":"E-200-E WORKER TYPE E",
+        "36":"LOGOS II",
+        "41":"GR-10 JAGUAR",
+        "42":"GR-30 SALAMANDER",
+        "43":"GR-20 FALCON",
+        "44":"GR-1 EBONY SPEEDER",
+        "45":"GR-22 DRAGON",
+        "46":"GR-40 SUPER DRAGON",
+        "51":"HE1 SPIDER",
+        "52":"HE80 TARTARUS",
+        "53":"HE6A2 LYCOSA",
+        "54":"TARTARUS SABRE",
+        "55":"HE16 TARANTULA",
+        "56":"MONOLITH"
+    },
+    "levelUpFee":{
+        "1":"0",
+        "2":"3000",
+        "3":"24000",
+        "4":"72000",
+        "5":"150000",
+        "6":"300000",
+        "7":"726000",
+        "8":"1254000",
+        "9":"2400000",
+        "10":"10000000"
+    },
+    "levelUpMultiplier":{
+        "1":"1",
+        "2":"2",
+        "3":"4",
+        "4":"8",
+        "5":"10",
+        "6":"15",
+        "7":"22",
+        "8":"30",
+        "9":"40",
+        "10":"80"
+    },
+    "mainAttribute":{
+        "Attacker":"FIRE",
+        "Gunner":"EN",
+        "Bastion":"DEF",
+        "Fighter":"AGI",
+        "Infiltrator":"HACK"
+    },
+    "secondAttribute":{
+        "Attacker":"DEF",
+        "Gunner":"HACK",
+        "Bastion":"FIRE",
+        "Fighter":"EN",
+        "Infiltrator":"AGI"
+    }
+}

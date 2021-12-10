@@ -1,0 +1,81 @@
+{
+    "blindboxes":[
+        {
+            "name":"Ship Starter Blindbox",
+            "price":"40 MXC",
+            "index":0,
+            "img":"./img/blindbox/ship0.jpg",
+            "previewImg":"./img/blindbox/preview_ship0.png",
+            "iconImg":"./img/myicons/shipicon.png",
+            "ships":"Common Uncommon"
+        },
+        {
+            "name":"Ship No.1 Blindbox",
+            "price":"160 MXC",
+            "index":1,
+            "img":"./img/blindbox/ship1.jpg",
+            "previewImg":"./img/blindbox/preview_ship1.png",
+            "iconImg":"./img/myicons/shipicon.png",
+            "ships":"Common Uncommon Rare"
+        },
+        {
+            "name":"Ship No.2 Blindbox",
+            "price":"1270 MXC",
+            "index":2,
+            "img":"./img/blindbox/ship2.jpg",
+            "previewImg":"./img/blindbox/preview_ship2.png",
+            "iconImg":"./img/myicons/shipicon.png",
+            "ships":"Common Uncommon Rare Epic"
+        },
+        {
+            "name":"Ship No.3 Blindbox",
+            "price":"6660 MXC",
+            "index":3,
+            "img":"./img/blindbox/ship3.jpg",
+            "previewImg":"./img/blindbox/preview_ship3.png",
+            "iconImg":"./img/myicons/shipicon.png",
+            "ships":"Rare Epic Legendary"
+        },
+        {
+            "name":"Ship No.4 Blindbox",
+            "price":"35500 MXC",
+            "index":4,
+            "img":"./img/blindbox/ship4.jpg",
+            "previewImg":"./img/blindbox/preview_ship4.png",
+            "iconImg":"./img/myicons/shipicon.png",
+            "ships":"Epic Legendary Primordial"
+        },
+        {
+            "name":"Planet No.1 Blindbox",
+            "price":"1000 MXC",
+            "img":"./img/blindbox/planet1.jpg",
+            "previewImg":"./img/blindbox/preview_planet1.png",
+            "iconImg":"./img/myicons/planeticon.png",
+            "ships":"Common Uncommon Rare"
+        },
+        {
+            "name":"Planet No.2 Blindbox",
+            "price":"2000 MXC",
+            "img":"./img/blindbox/planet2.jpg",
+            "previewImg":"./img/blindbox/preview_planet2.png",
+            "iconImg":"./img/myicons/planeticon.png",
+            "ships":"Uncommon Rare Epic"
+        },
+        {
+            "name":"Planet No.3 Blindbox",
+            "price":"3000 MXC",
+            "img":"./img/blindbox/planet3.jpg",
+            "previewImg":"./img/blindbox/preview_planet3.png",
+            "iconImg":"./img/myicons/planeticon.png",
+            "ships":"Rare Epic Legendary"
+        },
+        {
+            "name":"Planet No.4 Blindbox",
+            "price":"4000 MXC",
+            "img":"./img/blindbox/planet4.jpg",
+            "previewImg":"./img/blindbox/preview_planet4.png",
+            "iconImg":"./img/myicons/planeticon.png",
+            "ships":"Epic Legendary Primordial"
+        }
+    ]
+}

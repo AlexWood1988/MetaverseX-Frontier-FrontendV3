@@ -1,0 +1,76 @@
+{"abi":[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "shipContractAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "auConractAddress",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_shipId",
+				"type": "uint256"
+			}
+		],
+		"name": "levelUpByFee",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "levelUpFee",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "repairFee",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_shipId",
+				"type": "uint256"
+			}
+		],
+		"name": "repairShipAll",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	}
+]}
