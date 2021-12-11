@@ -92,6 +92,7 @@ const Header= function() {
                     className="img-fluid d-block"
                     alt="#"
                     width="20%"
+                    height="20%"
                   />
                   <img
                     src="./img/logo-3.png"
