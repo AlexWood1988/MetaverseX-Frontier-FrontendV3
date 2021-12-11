@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Breakpoint, { BreakpointProvider, setDefaultBreakpoints } from "react-socks";
 import { Link } from '@reach/router';
 import useOnclickOutside from "react-cool-onclickoutside";
-
+import 'tachyons'
 
 setDefaultBreakpoints([
   { xs: 0 },
@@ -101,6 +101,8 @@ const Header= function() {
                     src="./img/logo-light.png"
                     className="img-fluid d-none"
                     alt="#"
+                    height="33%"
+                    width="33%"
                   />
                 </NavLink>
               </div>
