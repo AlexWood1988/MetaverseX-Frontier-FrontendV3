@@ -91,18 +91,21 @@ const Header= function() {
                     src="./img/logo-3.png"
                     className="img-fluid d-block"
                     alt="#"
+                    width="20%"
                   />
                   <img
                     src="./img/logo-3.png"
                     className="img-fluid d-3"
                     alt="#"
+                    height="40%"
+                    width="40%"
                   />
                   <img
                     src="./img/logo-light.png"
                     className="img-fluid d-none"
                     alt="#"
-                    height="33%"
-                    width="33%"
+                    height="40%"
+                    width="40%"
                   />
                 </NavLink>
               </div>
