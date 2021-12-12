@@ -28,8 +28,6 @@ const inline = keyframes`
 
 const slidermainparticle= () => (
  <div className="container">
-   <div className="spacer-40"></div>
-   <div className="spacer-40"></div>
     <div className="row align-items-center">
           <div className="col-md-6">
               <div className="spacer-single"></div>

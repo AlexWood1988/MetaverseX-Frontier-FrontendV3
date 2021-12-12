@@ -15,31 +15,31 @@ const GlobalStyles = createGlobalStyle`
     display: block !important;
   }
   .navbar .mainside a{
-    background: #8364e2;
+    background: #3665ff;
     &:hover{
-      box-shadow: 2px 2px 20px 0px #8364e2;
+      box-shadow: 2px 2px 20px 0px #3665ff;
     }
   }
   .item-dropdown{
     .dropdown{
       a{
         &:hover{
-          background: #8364e2;
+          background: #3665ff;
         }
       }
     }
   }
   .btn-main{
-    background: #8364e2;
+    background: #3665ff;
     &:hover{
-      box-shadow: 2px 2px 20px 0px #8364e2;
+      box-shadow: 2px 2px 20px 0px #3665ff;
     }
   }
   p.lead{
     color: #a2a2a2;
   }
   .navbar .navbar-item .lines{
-    border-bottom: 2px solid #8364e2;
+    border-bottom: 2px solid #3665ff;
   }
   .jumbotron.no-bg{
     height: 100vh;
@@ -53,7 +53,7 @@ const GlobalStyles = createGlobalStyle`
     top: 0;
   }
   .text-uppercase.color{
-    color: #8364e2;
+    color: #3665ff;
   }
   .de_count h3 {
     font-size: 36px;
@@ -73,22 +73,22 @@ const GlobalStyles = createGlobalStyle`
     }
   }
   .de_countdown{
-    border: solid 2px #8364e2;
+    border: solid 2px #3665ff;
   }
   .author_list_pp, .author_list_pp i, 
   .nft_coll_pp i, .feature-box.style-3 i, 
   footer.footer-light #form_subscribe #btn-subscribe i, 
   #scroll-to-top div{
-    background: #8364e2;
+    background: #3665ff;
   }
   footer.footer-light .subfooter .social-icons span i{
     background: #403f83;
   }
   .author_list_pp:hover img{
-    box-shadow: 0px 0px 0px 2px #8364e2;
+    box-shadow: 0px 0px 0px 2px #3665ff;
   }
   .nft__item_action span{
-    color: #8364e2;
+    color: #3665ff;
   }
   .feature-box.style-3 i.wm{
     color: rgba(131,100,226, .1);
