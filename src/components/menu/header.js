@@ -91,8 +91,8 @@ const Header= function() {
                     src="./img/logo-3.png"
                     className="img-fluid d-block"
                     alt="#"
-                    width="20%"
-                    height="20%"
+                    width="40%"
+                    height="40%"
                   />
                   <img
                     src="./img/logo-3.png"
@@ -121,15 +121,15 @@ const Header= function() {
                         <div className="dropdown-custom dropdown-toggle btn" 
                           onClick={handleBtnClick}
                           >
-                          Warehouse
+                          My Assets
                         </div>
                         {openMenu && (
                           <div className='item-dropdown'>
                             <div className="dropdown" onClick={closeMenu}>
-                              <NavLink to="/myship">MyShips</NavLink>
-                              <NavLink to="/myitem">MyItems</NavLink>
-                              <NavLink to="/myplanet">MyPlanets</NavLink>
-                              <NavLink to="/mymine">MyMines</NavLink>
+                              <NavLink to="/myship">Ship</NavLink>
+                              <NavLink to="/myitem">Item</NavLink>
+                              <NavLink to="/myplanet">Celestial Body</NavLink>
+                              <NavLink to="/mymine">Mine</NavLink>
                             </div>
                           </div>
                         )}
@@ -145,12 +145,12 @@ const Header= function() {
                         {openMenu1 && (
                           <div className='item-dropdown'>
                             <div className="dropdown" onClick={closeMenu1}>
-                              <NavLink to="/indev">Ships</NavLink>
-                              <NavLink to="/indev">Planets</NavLink>
-                              <NavLink to="/indev">Galaxies</NavLink>
-                              <NavLink to="/indev">Mines</NavLink>
-                              <NavLink to="/indev">Equipments</NavLink>
-                              <NavLink to="/indev">Others</NavLink>
+                              <NavLink to="/indev">Ship</NavLink>
+                              <NavLink to="/indev">Celestial Body</NavLink>
+                              <NavLink to="/indev">Galaxy</NavLink>
+                              <NavLink to="/indev">Mine</NavLink>
+                              <NavLink to="/indev">Equipment</NavLink>
+                              <NavLink to="/indev">Other</NavLink>
                             </div>
                           </div>
                         )}
@@ -167,9 +167,9 @@ const Header= function() {
                           <div className='item-dropdown'>
                             <div className="dropdown" onClick={closeMenu2}>
                             <NavLink to="/indev">Fleet</NavLink>
-                              <NavLink to="/indev">Events</NavLink>
+                              <NavLink to="/indev">Event</NavLink>
                               <NavLink to="/indev">News</NavLink>
-                              <NavLink to="/indev">Pirates</NavLink>
+                              <NavLink to="/indev">Pirate</NavLink>
                               <NavLink to="/indev">BattleHall</NavLink>
                               <NavLink to="/indev">Leaderboard</NavLink>
                             </div>
@@ -192,15 +192,15 @@ const Header= function() {
                         <div ref={ref}>
                           <div className="dropdown-custom dropdown-toggle btn" 
                              onMouseEnter={handleBtnClick} onMouseLeave={closeMenu}>
-                            Warehouse
+                            My Assets
                             <span className='lines'></span>
                             {openMenu && (
                             <div className='item-dropdown'>
                               <div className="dropdown" onClick={closeMenu}>
-                                <NavLink to="/myship">MyShips</NavLink>
-                                <NavLink to="/myitem">MyItems</NavLink>
-                                <NavLink to="/myplanet">MyPlanets</NavLink>
-                                <NavLink to="/mymine">MyMines</NavLink>
+                                <NavLink to="/myship">Ship</NavLink>
+                                <NavLink to="/myitem">Item</NavLink>
+                                <NavLink to="/myplanet">Celestial Body</NavLink>
+                                <NavLink to="/mymine">Mine</NavLink>
                               </div>
                             </div>
                           )}
@@ -217,12 +217,12 @@ const Header= function() {
                             {openMenu1 && (
                             <div className='item-dropdown'>
                               <div className="dropdown" onClick={closeMenu1}>
-                              <NavLink to="/indev">Ships</NavLink>
-                              <NavLink to="/indev">Planets</NavLink>
-                              <NavLink to="/indev">Galaxies</NavLink>
-                              <NavLink to="/indev">Mines</NavLink>
-                              <NavLink to="/indev">Equipments</NavLink>
-                              <NavLink to="/indev">Others</NavLink>
+                              <NavLink to="/indev">Ship</NavLink>
+                              <NavLink to="/indev">Celestial Body</NavLink>
+                              <NavLink to="/indev">Galaxy</NavLink>
+                              <NavLink to="/indev">Mine</NavLink>
+                              <NavLink to="/indev">Equipment</NavLink>
+                              <NavLink to="/indev">Other</NavLink>
                               </div>
                             </div>
                           )}
@@ -240,9 +240,9 @@ const Header= function() {
                             <div className='item-dropdown'>
                               <div className="dropdown" onClick={closeMenu2}>
                               <NavLink to="/indev">Fleet</NavLink>
-                              <NavLink to="/indev">Events</NavLink>
+                              <NavLink to="/indev">Event</NavLink>
                               <NavLink to="/indev">News</NavLink>
-                              <NavLink to="/indev">Pirates</NavLink>
+                              <NavLink to="/indev">Pirate</NavLink>
                               <NavLink to="/indev">BattleHall</NavLink>
                               <NavLink to="/indev">Leaderboard</NavLink>
                               </div>

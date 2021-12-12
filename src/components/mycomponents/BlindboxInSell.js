@@ -55,10 +55,10 @@ class BlindboxInSell extends React.Component {
                                 <h4>{nft.name}</h4>
                             </span>
                             <div className="nft__item_price f5">
-                                {nft.price}
+                                {nft.tier}
                             </div>
                             <div className="nft__item_price">
-                                <p className='f6'>{nft.ships}</p>
+                                <p className='f6'>{nft.price}</p>
                             </div>
                             <div className="nft__item_action">
                                 <span onClick={()=> this.buyBlindbox(nft.index)}>Buy Now</span>

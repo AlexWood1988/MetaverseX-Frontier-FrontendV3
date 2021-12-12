@@ -77,7 +77,7 @@ class MyMine extends React.Component {
                                     <h4>
                                         MyMines:                                             
                                         <div className="clearfix"></div>
-                                        <span id="wallet" className='f6'>Total number of mines: {this.state.mineCount}</span>
+                                        <span id="wallet" className='f6'>Number: {this.state.mineCount}</span>
                                     </h4>
                                 </div>
                             </div>

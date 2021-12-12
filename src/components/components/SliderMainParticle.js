@@ -28,12 +28,14 @@ const inline = keyframes`
 
 const slidermainparticle= () => (
  <div className="container">
+   <div className="spacer-40"></div>
+   <div className="spacer-40"></div>
     <div className="row align-items-center">
           <div className="col-md-6">
               <div className="spacer-single"></div>
               <h6> <span className="text-uppercase color">MetaverseX: Frontier</span></h6>
               <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
-              <h1 className="col-white">Exploration, Exploitation, Expansion, Extermination</h1>
+              <h1 className="col-white">Explore Mataverse</h1>
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
               <p className="lead col-white">
@@ -76,7 +78,7 @@ const slidermainparticle= () => (
           </div>
           <div className="col-md-6 xs-hide">
           <Reveal className='onStep d-inline' keyframes={inline} delay={300} duration={1200} triggerOnce>
-              <img src="./img/misc/women-with-vr.png" className="img-fluid" alt=""/>
+              <img src="./img/misc/Ship.png" className="img-fluid" alt=""/>
           </Reveal>
           </div>
       </div>

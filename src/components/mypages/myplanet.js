@@ -83,7 +83,7 @@ class MyPlanet extends React.Component {
                                     <h4>
                                         MyPlanets                                           
                                         <div className="clearfix"></div>
-                                        <span id="wallet" className='f6'>Total number of planets: {this.state.planetCount}</span>
+                                        <span id="wallet" className='f6'>Number: {this.state.planetCount}</span>
                                     </h4>
                                 </div>
                             </div>

@@ -71,7 +71,7 @@ class MyShip extends React.Component {
                                     <h4>
                                         MyShips                                                
                                         <div className="clearfix"></div>
-                                        <span id="wallet" className='f6'>Total number of ships: {this.state.shipCount}</span>
+                                        <span id="wallet" className='f6'>Number: {this.state.shipCount}</span>
                                     </h4>
                                 </div>
                             </div>
