@@ -262,7 +262,7 @@ const Header= function() {
               </BreakpointProvider>
 
               <div className='mainside'>
-                <NavLink to="/home" className="btn-main">Wallet Connected</NavLink>
+                <NavLink to="/home" className="btn-main">Wallet Connect</NavLink>
               </div>
                   
       </div>

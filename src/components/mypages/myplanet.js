@@ -75,13 +75,13 @@ class MyPlanet extends React.Component {
         } else {
             return(<div>
                 <GlobalStyles/>
-                <section className='mt3 container d_coll no-bottom'>
+                <section className='mt3 container d_coll no-bottom mh4'>
                     <div className='row'>
                         <div className="col-md-12">
                             <div className="d_profile">
                                 <div className="profile_name">
-                                    <h4>
-                                        MyPlanets                                           
+                                    <h4 className='tl'>
+                                        Planet                                         
                                         <div className="clearfix"></div>
                                         <span id="wallet" className='f6'>Number: {this.state.planetCount}</span>
                                     </h4>

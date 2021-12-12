@@ -50,21 +50,21 @@ const slidermainparticle= () => (
               <div className="row">
                   <div className="spacer-single"></div>
                   <div className="row">
-                          <div className="col-lg-4 col-md-6 col-sm-4 mb30">
+                          <div className="col-lg-4 col-md-6 col-sm-4 mb33">
                               <div className="de_count text-left">
                                   <h3><span>32,215</span></h3>
                                   <h5 className="id-color">Holders</h5>
                               </div>
                           </div>
 
-                          <div className="col-lg-4 col-md-6 col-sm-4 mb30">
+                          <div className="col-lg-4 col-md-6 col-sm-4 mb33">
                               <div className="de_count text-left">
                                   <h3><span>27,423</span></h3>
                                   <h5 className="id-color">Followers</h5>
                               </div>
                           </div>
 
-                          <div className="col-lg-4 col-md-6 col-sm-4 mb30">
+                          <div className="col-lg-4 col-md-6 col-sm-4 mb33">
                               <div className="de_count text-left">
                                   <h3><span>$600,000</span></h3>
                                   <h5 className="id-color">Market Cap</h5>

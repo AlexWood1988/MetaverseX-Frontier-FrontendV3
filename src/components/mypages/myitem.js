@@ -84,13 +84,13 @@ class MyItem extends React.Component {
         } else {
             return(<div>
                 <GlobalStyles/>
-                <section className='mt3 container d_coll no-bottom'>
+                <section className='mt3 container d_coll no-bottom mh4'>
                     <div className='row'>
                         <div className="col-md-12">
                             <div className="d_profile">
                                 <div className="profile_name">
-                                    <h4>
-                                        MyItems:                                              
+                                    <h4 className='tl'>
+                                        Item:                                              
                                         <div className="clearfix"></div>
                                         <span id="wallet" className='f6'>Blindboxes, Awards, NFTs</span>
                                     </h4>
@@ -100,7 +100,7 @@ class MyItem extends React.Component {
                     </div>
                 </section>
 
-                <div className='row ph5 pv2'>
+                <div className='row ph4 pv2'>
                     {
                         this.state.nfts.map((nftArray, i) => {
                             return nftArray.map((nft, k) => {
