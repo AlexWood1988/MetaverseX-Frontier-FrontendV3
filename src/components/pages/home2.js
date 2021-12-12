@@ -165,7 +165,7 @@ const homeone= () => (
         <div className='row'>
           <div className="spacer-double"></div>
           <div className='col-lg-12 mb-2'>
-              <h2>Blind boxes In Sale</h2>
+              <h2>Blind Boxes in Sale</h2>
           </div>
         </div> 
         <BlindboxInSell/>

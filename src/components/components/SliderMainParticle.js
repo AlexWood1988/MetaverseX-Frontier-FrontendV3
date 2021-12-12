@@ -35,7 +35,7 @@ const slidermainparticle= () => (
               <div className="spacer-single"></div>
               <h6> <span className="text-uppercase color">MetaverseX: Frontier</span></h6>
               <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
-              <h1 className="col-white">Explore Mataverse</h1>
+              <h1 className="col-white">Explore Metaverse</h1>
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
               <p className="lead col-white">
