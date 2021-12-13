@@ -3,10 +3,11 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { carouselNew } from '../components/constants';
-import BlindboxInfo from "../mycomponents/constants/BlindboxInfo.json";
+import { carouselNew } from '../../components/constants';
+import BlindboxInfo from "../constants/BlindboxInfo.json";
 import 'tachyons';
-import BlindboxWeb3 from "./Web3/blindboxWeb3";
+import BlindboxWeb3 from "../Web3/blindboxWeb3";
+import ApprovePopupButton from "./ApprovePopupButton";
 
 const Outer = styled.div`
   display: flex;
@@ -60,9 +61,7 @@ class BlindboxInSell extends React.Component {
                             <div className="nft__item_price">
                                 <p className='f6'>{nft.price}</p>
                             </div>
-                            <div className="nft__item_action">
-                                <span onClick={()=> this.buyBlindbox(nft.index)}>Buy Now</span>
-                            </div>
+                            <ApprovePopupButton blindbox={nft} buyBlindbox={this.buyBlindbox}/>
                             <div className="nft__item_like">
                                 <i className="fa fa-heart"></i><span>{nft.likes}</span>
                             </div>                                                        

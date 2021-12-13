@@ -76,7 +76,7 @@ class MyItem extends React.Component {
             return(
                 <div> 
                 {
-                    this.state.detailNft === 'blindbox' ? 
+                    this.state.detailNft.category === 'blindbox' ? 
                     <ItemDetail nft={this.state.detailNft} useItem={this.openBlindbox}/> :
                     <ItemDetail nft={this.state.detailNft} useItem={this.useItem}/>
                 }

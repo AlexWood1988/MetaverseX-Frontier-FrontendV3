@@ -2,7 +2,7 @@ import Web3 from "web3";
 import * as constants from "../constants/contracts.json";
 import shipFactoryContractAbi from "./abi/ShipFactory.json";
 import shipHelperContractAbi from "./abi/ShipHelper.json";
-import auContractAbi from "./abi/AuContract.json";
+import auContractAbi from "./abi/TokenContract1.json";
 import shipInfo from "../constants/shipInfo.json";
 
 const ShipWeb3 = {

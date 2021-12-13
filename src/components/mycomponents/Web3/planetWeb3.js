@@ -50,9 +50,10 @@ const PlanetWeb3 = {
         return new Promise((resolve, reject) => {
             window.planetFactoryContract.methods.Planets(id).call().then(_planet => {
                 let _dplanet = Object.assign({},_planet);
-                _dplanet['img'] = `./img/planets/${_planet.rarity}.jpg`
                 _dplanet['id'] = id;
                 _dplanet.rarity = shipInfo.rarity[_planet.rarity];
+                _dplanet.live = _dplanet.dna.substring(_dplanet.dna.length-1,_dplanet.dna.length);
+                _dplanet['img'] = `./img/planets/${_dplanet.live}.jpg`
                 resolve(_dplanet);
             });
         })

@@ -2,6 +2,7 @@ import React from "react";
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import UseItemButton from "../mycomponents/Item/UseItemButton";
+import BlindboxWeb3 from "../mycomponents/Web3/blindboxWeb3";
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
@@ -10,6 +11,27 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 class ItemDetail extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            allowance: false
+        }
+    }
+
+    componentDidMount = () => {
+        if (this.props.nft.category === 'blindbox') {
+            BlindboxWeb3.init().then(re => {
+                BlindboxWeb3.getApprovedToBlindboxManager(this.props.nft.index).then(re2 => {
+                    this.setState({allowance: re2});
+                })
+            })
+        }
+    }
+
+    approveToManager = () => {
+        console.log("index",this.props.nft.index)
+        BlindboxWeb3.setApprovalToBlindboxManager(this.props.nft.index).then(re=>{});
+    }
 
     render(){
         return (<div>
@@ -42,8 +64,22 @@ class ItemDetail extends React.Component {
 
                             <div className="spacer-40"></div>
                             {
-                                this.props.nft.category === 'blindbox' ?
-                                <UseItemButton nft={this.props.nft} openBlindbox={this.props.useItem}/> :
+                                this.props.nft.category === 'blindbox' ? 
+                                <div> 
+                                    {
+                                        this.state.allowance 
+                                        ?
+                                        <UseItemButton nft={this.props.nft} openBlindbox={this.props.useItem}/>
+                                        :
+                                        <div>
+                                            <p> WARNING: You need to approve your blind box(es) first.</p>
+                                            <ul className="de_nav">
+                                                <li id='Mainbtn' className="active"><span onClick={this.approveToManager}>Approve</span></li>
+                                            </ul>
+                                        </div>
+                                    }
+                                </div>
+                                :
                                 <ul className="de_nav">
                                     <li id='Mainbtn' className="active"><span onClick={this.props.useItem}>Use Item</span></li>
                                 </ul>

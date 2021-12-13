@@ -4,8 +4,8 @@ import SliderMainParticle from '../components/SliderMainParticle';
 import FeatureBox from '../components/FeatureBox';
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
-import BlindboxInSell from '../mycomponents/BlindboxInSell';
-import HomeEventsSlider from '../mycomponents/HomeEventsSlider';
+import BlindboxInSell from '../mycomponents/Homepage/BlindboxInSell';
+import HomeEventsSlider from '../mycomponents/Homepage/HomeEventsSlider';
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader .logo .d-block{

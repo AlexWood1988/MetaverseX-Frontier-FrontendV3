@@ -1,6 +1,7 @@
 import Web3 from "web3";
 import * as constants from "../constants/contracts.json";
 import blindboxManagerContractAbi from "./abi/BlindboxManager.json";
+import blindboxAbi from "./abi/BlindboxV1.json";
 import BlindboxInfo from "../constants/BlindboxInfo.json";
 
 const BlindboxWeb3 = {
@@ -11,7 +12,9 @@ const BlindboxWeb3 = {
                 const blindboxManagerContract = constants.blindboxManagerContract;
                 // init contract
                 window.blindboxManagerContract = new window.web3.eth.Contract(blindboxManagerContractAbi.abi, blindboxManagerContract);
-
+                window.blindboxContracts = [];
+                window.blindboxContracts[0] = new window.web3.eth.Contract(blindboxAbi.abi, constants.blindboxesContract[0]);
+                window.blindboxContracts[1] = new window.web3.eth.Contract(blindboxAbi.abi, constants.blindboxesContract[1]);
                 window.defaultAccount = accounts[0];
                 resolve(true);
             })
@@ -57,6 +60,24 @@ const BlindboxWeb3 = {
                          })
                 }
             })
+        })
+    },
+
+    getApprovedToBlindboxManager(index){
+        return new Promise((resolve, reject) => {
+            window.blindboxContracts[index].methods.isApprovedForAll(window.defaultAccount, 
+                constants.blindboxManagerContract).call().then(re => {
+                    resolve(re);
+                })
+        })
+    },
+
+    setApprovalToBlindboxManager(index){
+        return new Promise((resolve, reject) => {
+            window.blindboxContracts[index].methods.setApprovalForAll(constants.blindboxManagerContract,
+                true).send({from:window.defaultAccount}).then(re => {
+                    resolve(re);
+                })
         })
     }
 
