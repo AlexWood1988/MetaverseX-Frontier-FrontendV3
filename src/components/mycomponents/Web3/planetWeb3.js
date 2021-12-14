@@ -165,6 +165,15 @@ const PlanetWeb3 = {
         })
     },
 
+    getSimpleProfit(mineId){
+        return new Promise((resolve, reject) => {
+            window.mineFactoryContract.methods.checkProfitSimple(mineId).call().then(result => {
+                if (result.length <= 14) resolve("0");
+                else resolve(result.substring(0,result.length-18)+'.'+result.substring(result.length-18,result.length-14));
+            })
+        })
+    },
+
     getProfit(mineId){
         return new Promise((resolve, reject) => {
             window.mineFactoryContract.methods.getReward(mineId).send({from:window.defaultAccount})

@@ -19,7 +19,8 @@ class MineDetail extends React.Component {
         this.state={
             ships:[],
             allships:[],
-            planetMultiplier:'0'
+            planetMultiplier:'0',
+            simpleProfit: '0'
         };
     }
 
@@ -30,6 +31,9 @@ class MineDetail extends React.Component {
         })
         PlanetWeb3.init().then(re=>{
             this.getPlanetMultiplier();
+            PlanetWeb3.getSimpleProfit(this.props.mine.id).then(re => {
+                this.setState({simpleProfit: re});
+            })
         })
     }
 
@@ -174,8 +178,8 @@ class MineDetail extends React.Component {
                                             </span>
                                         </div>                                    
                                         <div className="p_list_info">
-                                            Profit Last Time Refresh <b></b>
-                                            <span><b>{(this.props.mine.profitLastTime).substring(0, this.props.mine.profitLastTime.length - 18)}</b> AU</span>
+                                            Profit Now <b></b>
+                                            <span><b>{this.state.simpleProfit}</b> AU</span>
                                         </div>
                                     </div>
 
