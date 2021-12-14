@@ -13,7 +13,6 @@ class ApprovePopupButton extends React.Component {
         super(props);
         this.state={
             open: false,
-            name: "",
             mxcBalance: "Loading",
             allowance: false
         }
@@ -53,10 +52,6 @@ class ApprovePopupButton extends React.Component {
     handleClose = () => {
         this.setOpen(false);
     };
-
-    onInputChange = (event) => {
-        this.setState({name:event.target.value});
-    }
 
     render(){
         return (

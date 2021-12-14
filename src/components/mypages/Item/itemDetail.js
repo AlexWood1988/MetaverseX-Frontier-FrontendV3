@@ -1,8 +1,7 @@
 import React from "react";
-import Footer from '../components/footer';
+import Footer from '../../components/footer';
 import { createGlobalStyle } from 'styled-components';
-import UseItemButton from "../mycomponents/Item/UseItemButton";
-import BlindboxWeb3 from "../mycomponents/Web3/blindboxWeb3";
+import NoticePopup from "../../mycomponents/tools/NoticePopup";
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
@@ -14,23 +13,21 @@ class ItemDetail extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            allowance: false
+            noticeOpen : false
         }
     }
 
-    componentDidMount = () => {
-        if (this.props.nft.category === 'blindbox') {
-            BlindboxWeb3.init().then(re => {
-                BlindboxWeb3.getApprovedToBlindboxManager(this.props.nft.index).then(re2 => {
-                    this.setState({allowance: re2});
-                })
-            })
+    handleUse = () => {
+        if (this.props.nft.category === 'nft_convertible'){
+            this.setState({noticeOpen: true});
+            //this.props.useItem(this.props.nft);
+        } else if (this.props.nft.category === 'token_convertible'){
+            this.props.useItem(this.props.nft);
         }
     }
 
-    approveToManager = () => {
-        console.log("index",this.props.nft.index)
-        BlindboxWeb3.setApprovalToBlindboxManager(this.props.nft.index).then(re=>{});
+    handleNoticeClose = () => {
+        this.setState({noticeOpen: false});
     }
 
     render(){
@@ -54,35 +51,22 @@ class ItemDetail extends React.Component {
                             <div className="item_author">                                    
                                 <div className="author_list_pp">
                                     <span>
-                                        <img className="lazy" src="./img/carousel/crs-3.jpg" alt=""/>
+                                        <img className="lazy" src="./img/myicons/blindboxgift.png" alt=""/>
                                     </span>
                                 </div>                                    
                                 <div className="author_list_info">
-                                    <span>You will get 200 AU</span>
+                                    <span>You will get {this.props.nft.reward}</span>
                                 </div>
                             </div>
 
                             <div className="spacer-40"></div>
+                            <ul className="de_nav">
+                                <li id='Mainbtn' className="active"><span onClick={()=>this.handleUse()}>Redeem Item</span></li>
+                            </ul>
                             {
-                                this.props.nft.category === 'blindbox' ? 
-                                <div> 
-                                    {
-                                        this.state.allowance 
-                                        ?
-                                        <UseItemButton nft={this.props.nft} openBlindbox={this.props.useItem}/>
-                                        :
-                                        <div>
-                                            <p> WARNING: You need to approve your blind box(es) first.</p>
-                                            <ul className="de_nav">
-                                                <li id='Mainbtn' className="active"><span onClick={this.approveToManager}>Approve</span></li>
-                                            </ul>
-                                        </div>
-                                    }
-                                </div>
-                                :
-                                <ul className="de_nav">
-                                    <li id='Mainbtn' className="active"><span onClick={this.props.useItem}>Use Item</span></li>
-                                </ul>
+                                this.state.noticeOpen
+                                ? <NoticePopup notice={"Sorry, this type of NFT cannot be redeemed yet, please wait for the official notification"} handleNoticeClose={this.handleNoticeClose}/>
+                                : "" 
                             }
 
                         </div>

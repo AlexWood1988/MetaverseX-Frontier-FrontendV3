@@ -3,17 +3,19 @@
         {
             "name":"Blind Box - Ship",
             "tier":"Tier Common",
-            "price":"40 MXC",
             "index":0,
+            "price":"40 MXC",
+            "possibility":"Uncommon Common",
             "img":"./img/blindbox/ship0.jpg",
             "previewImg":"./img/blindbox/preview_ship0.png",
             "iconImg":"./img/myicons/shipicon.png"
         },
         {
-            "name":"Blind Box - Celestial Body",
+            "name":"Blind Box - CB",
             "tier":"Tier Common",
             "index":1,
             "price":"10 MXC",
+            "possibility":"Uncommon Common Rare",
             "img":"./img/blindbox/planet1.jpg",
             "previewImg":"./img/blindbox/preview_planet1.png",
             "iconImg":"./img/myicons/planeticon.png"
@@ -51,7 +53,7 @@
             "iconImg":"./img/myicons/shipicon.png"
         },
         {
-            "name":"Blind Box - Celestial Body",
+            "name":"Blind Box - CB",
             "tier":"Tier Uncommon",
             "price":"2000 MXC",
             "img":"./img/blindbox/planet2.jpg",
@@ -59,7 +61,7 @@
             "iconImg":"./img/myicons/planeticon.png"
         },
         {
-            "name":"Blind Box - Celestial Body",
+            "name":"Blind Box - CB",
             "tier":"Tier Epic",
             "price":"3000 MXC",
             "img":"./img/blindbox/planet3.jpg",
@@ -67,7 +69,7 @@
             "iconImg":"./img/myicons/planeticon.png"
         },
         {
-            "name":"Blind Box - Celestial Body",
+            "name":"Blind Box - CB",
             "tier":"Tier Legendary",
             "price":"4000 MXC",
             "img":"./img/blindbox/planet4.jpg",

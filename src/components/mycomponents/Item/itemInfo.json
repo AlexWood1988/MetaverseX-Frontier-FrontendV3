@@ -1,7 +1,17 @@
 {
     "nftName":{
-        "0":"200 Aurics", 
+        "0":"NFT - 200 Aurics", 
+        "1":"NFT - DECODER α",
+        "2":"NFT - 1 Credit Token"
+    },
+    "nftCategory":{
+        "0":"token_convertible",
+        "1":"nft_convertible",
+        "2":"token_convertible"
+    },
+    "nftReward":{
+        "0":"200 AU",
         "1":"DECODER α",
-        "2":"1 Credit Token"
+        "2":"1 MXC"
     }
 }

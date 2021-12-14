@@ -34,7 +34,7 @@ import Progressbar from './pages/progressbar';
 import Tabs from './pages/tabs';
 
 import MyShip from './mypages/myship';
-import MyItem from './mypages/myitem';
+import MyItem from './mypages/Item/myitem';
 import MyPlanet from './mypages/myplanet';
 import MyMine from './mypages/mymine';
 import InDev from './mypages/indev';

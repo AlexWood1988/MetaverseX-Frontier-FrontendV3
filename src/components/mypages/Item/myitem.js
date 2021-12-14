@@ -1,13 +1,15 @@
 import React from "react";
-import Footer from '../components/footer';
+import Footer from '../../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import 'tachyons';
-import ItemWeb3 from "../mycomponents/Web3/itemWeb3";
-import * as constants from "../mycomponents/constants/contracts.json";
-import ItemCard from "../mycomponents/Item/ItemCard";
+import ItemWeb3 from "../../mycomponents/Web3/itemWeb3";
+import * as constants from "../../mycomponents/constants/contracts.json";
+import ItemCard from "../../mycomponents/Item/ItemCard";
+import BlindboxCard from "../../mycomponents/Item/BlindboxCard";
 import ItemDetail from "./itemDetail";
-import itemInfo from "../mycomponents/Item/itemInfo.json";
-import BlindboxWeb3 from "../mycomponents/Web3/blindboxWeb3";
+import BlindboxDetail from "./blindboxDetail";
+import itemInfo from "../../mycomponents/Item/itemInfo.json";
+import BlindboxWeb3 from "../../mycomponents/Web3/blindboxWeb3";
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
@@ -67,8 +69,8 @@ class MyItem extends React.Component {
         BlindboxWeb3.openBlindbox(index,name).then(re=>{});
     }
 
-    useItem = () => {
-        console.log("use item");
+    useItem = (nft) => {
+        ItemWeb3.redeemNft(nft.contractId, nft.tokenId).then(re=>{});
     }
 
     render(){
@@ -77,7 +79,7 @@ class MyItem extends React.Component {
                 <div> 
                 {
                     this.state.detailNft.category === 'blindbox' ? 
-                    <ItemDetail nft={this.state.detailNft} useItem={this.openBlindbox}/> :
+                    <BlindboxDetail blindbox={this.state.detailNft} useItem={this.openBlindbox}/> :
                     <ItemDetail nft={this.state.detailNft} useItem={this.useItem}/>
                 }
             </div>);
@@ -108,9 +110,10 @@ class MyItem extends React.Component {
                                     tokenId:nft,
                                     contractId:i,
                                     contract:`${constants.nftContracts[i]}`,
-                                    category:'item',
+                                    category:itemInfo.nftCategory[`${i}`],
                                     img:`./img/nfts/0${i}.jpg`,
-                                    name: itemInfo.nftName[`${i}`]
+                                    name: itemInfo.nftName[`${i}`],
+                                    reward: itemInfo.nftReward[`${i}`]
                                 }
                                 return <ItemCard className='col-md-2 pa2' nft={_nft} key={k} openDetailNft={this.openDetailNft}/>;
                             })
@@ -118,7 +121,8 @@ class MyItem extends React.Component {
                     }
                     {
                         this.state.blindboxContracts.map((contract, i) => {
-                            return <ItemCard className='col-md-2 pa2' nft={Object.assign({},contract,{category:'blindbox'})} key={i} openDetailNft={this.openDetailNft}/>;
+                            if (Number(contract.balance) > 0) return <BlindboxCard className='col-md-2 pa2' blindbox={Object.assign({},contract,{category:'blindbox'})} key={i} openDetailNft={this.openDetailNft}/>;
+                            else return <div className={`nouse-nouse${i}`}>  </div>
                         })
                     }
                 </div>

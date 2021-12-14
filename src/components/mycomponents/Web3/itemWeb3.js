@@ -1,6 +1,7 @@
 import Web3 from "web3";
 import * as constants from "../constants/contracts.json";
 import ERC721PresetMinterPauserAutoIdAbi from "./abi/ERC721PresetMinterPauserAutoId.json";
+import TokenConvertibleNftAbi from "./abi/TokenConvertibleNft.json";
 
 const ItemWeb3 = {
     init(){
@@ -12,9 +13,12 @@ const ItemWeb3 = {
                 const nft03Contract = constants.nft03Contract;
                 // init contract
                 window.nftContract = [];
-                window.nftContract[0] = new window.web3.eth.Contract(ERC721PresetMinterPauserAutoIdAbi.abi, nft01Contract);
+                // 200 AU
+                window.nftContract[0] = new window.web3.eth.Contract(TokenConvertibleNftAbi.abi, nft01Contract);
+                // decoder a
                 window.nftContract[1] = new window.web3.eth.Contract(ERC721PresetMinterPauserAutoIdAbi.abi, nft02Contract);
-                window.nftContract[2] = new window.web3.eth.Contract(ERC721PresetMinterPauserAutoIdAbi.abi, nft03Contract);
+                // 1 MXC
+                window.nftContract[2] = new window.web3.eth.Contract(TokenConvertibleNftAbi.abi, nft03Contract);
                 // get default eth address
                 window.defaultAccount = accounts[0];
                 resolve(true);
@@ -46,6 +50,13 @@ const ItemWeb3 = {
         })
     },
 
+    redeemNft(contractId,tokenId){
+        return new Promise((resolve, reject) => {
+            window.nftContract[contractId].methods.redeem(tokenId).send({from:window.defaultAccount}).then(re =>{
+                resolve(re);
+            })
+        })
+    }
 }
 
 export default ItemWeb3;
