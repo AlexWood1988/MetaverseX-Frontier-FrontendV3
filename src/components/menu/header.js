@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import Breakpoint, { BreakpointProvider, setDefaultBreakpoints } from "react-socks";
 import { Link } from '@reach/router';
 import useOnclickOutside from "react-cool-onclickoutside";
-import 'tachyons'
+import 'tachyons';
+import MxcBalanceButton from "../mycomponents/tools/MxcBalanceButton";
 
 setDefaultBreakpoints([
   { xs: 0 },
@@ -262,7 +263,7 @@ const Header= function() {
               </BreakpointProvider>
 
               <div className='mainside'>
-                <NavLink to="/home" className="btn-main">Wallet Connect</NavLink>
+                <MxcBalanceButton />
               </div>
                   
       </div>
