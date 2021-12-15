@@ -173,6 +173,7 @@ const Header= function() {
                               <NavLink to="/indev">Pirate</NavLink>
                               <NavLink to="/indev">BattleHall</NavLink>
                               <NavLink to="/indev">Leaderboard</NavLink>
+                              <NavLink to="/elegantIcons">elegantIcons</NavLink>
                             </div>
                           </div>
                         )}
