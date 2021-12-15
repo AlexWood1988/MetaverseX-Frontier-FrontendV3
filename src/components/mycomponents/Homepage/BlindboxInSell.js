@@ -41,7 +41,6 @@ class BlindboxInSell extends React.Component {
                         <div className="author_list_pp">
                             <span>                                    
                                 <img className="lazy" src={nft.iconImg} alt=""/>
-                                <i className="fa fa-check"></i>
                             </span>
                         </div>
                         <div className="nft__item_wrap">

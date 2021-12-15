@@ -18,15 +18,11 @@ return (
   <section className='jumbotron breadcumb no-bg'>
     <div className='mainbreadcumb'>
       <div className='container'>
-        <div className='row m-10-hor'>
-          <div className='col-12'>
             <h4 className='tl'>
                 <b>Feature In Development</b>                                             
                 <div className="clearfix"></div>
                 <span id="wallet" className='f6'>Coming Soon</span>
             </h4>
-          </div>
-        </div>
       </div>
     </div>
   </section>

@@ -1061,7 +1061,7 @@ p.lead {
           box-shadow: 2px 2px 20px 0px rgba(131,100,226, 0);
           transition: all 0.3s ease;
           &:hover{
-            box-shadow: 2px 2px 20px 0px #FF343F;
+            box-shadow: 2px 2px 20px 0px #3665ff;
             transition: all 0.3s ease;
           }
         }
@@ -2588,8 +2588,8 @@ i.font60 {
     border-radius: 100%;
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
-    border: solid 5px #ffffff;
-    background: #ffffff;
+    border: solid 5px $color;
+    background: $color;
 }
 .nft_coll_pp i {
     font-size: 10px;

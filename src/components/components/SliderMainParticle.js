@@ -37,12 +37,12 @@ const slidermainparticle= () => (
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
               <p className="lead col-white">
-              MetaverseX project aims at creating a massive multiplayer metaverse with a dynamic & interactive finance & governance system.
+              Live Metaverse. Build fleets, battle & loot resources. Claim celestial bodies & galaxies.
               </p>
               </Reveal>
               <div className="spacer-10"></div>
               <Reveal className='onStep d-inline' keyframes={inline} delay={800} duration={900} triggerOnce>
-              <span onClick={()=> window.open("myship", "_self")} className="btn-main inline lead">Open Warehouse</span>
+              <span onClick={()=> window.open("myship", "_self")} className="btn-main inline lead">Your Assets</span>
               <div className="mb-sm-30"></div>
               </Reveal>
 

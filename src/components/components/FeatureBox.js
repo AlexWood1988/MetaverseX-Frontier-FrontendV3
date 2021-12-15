@@ -20,50 +20,51 @@ const featurebox= () => (
             <div className="col-lg-4 col-md-6 mb-3">
                 <div className="feature-box f-boxed style-3">
                   <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-                    <i className="bg-color-2 i-boxed icon_wallet"></i>
+                    <i className="bg-color-2 i-boxed icon_compass_alt"></i>
                   </Reveal>
                     <div className="text">
                       <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                        <h4 className="">Set up your wallet</h4>
+                        <h4 className="">Navigate</h4>
                       </Reveal>
                       <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                        <p className="">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.</p>
+                        <p className="">Join as a Pioneer, explore unknown stars and planets. Discover unique treasures.</p>
                       </Reveal>
                     </div>
+                    <i className="wm icon_compass_alt"></i>
                 </div>
             </div>
 
           <div className="col-lg-4 col-md-6 mb-3">
               <div className="feature-box f-boxed style-3">
                 <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-                  <i className=" bg-color-2 i-boxed icon_cloud-upload_alt"></i>
+                  <i className=" bg-color-2 i-boxed icon_currency"></i>
                 </Reveal>
                   <div className="text">
                     <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                      <h4 className="">Add your NFT's</h4>
+                      <h4 className="">Ecosystem</h4>
                     </Reveal>
                     <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.</p>
+                      <p className="">A fully dynamic & interactive ecosystem. All assets are on the smart chain. $MXC: universal credit point, $AU: Aurics.</p>
                     </Reveal>
                   </div>
-                  <i className="wm icon_cloud-upload_alt"></i>
+                  <i className="wm icon_currency"></i>
               </div>
           </div>
 
           <div className="col-lg-4 col-md-6 mb-3">
               <div className="feature-box f-boxed style-3">
                 <Reveal className='onStep' keyframes={fadeInUp} delay={0} duration={600} triggerOnce>
-                  <i className=" bg-color-2 i-boxed icon_tags_alt"></i>
+                  <i className=" bg-color-2 i-boxed icon_genius"></i>
                 </Reveal>
                   <div className="text">
                     <Reveal className='onStep' keyframes={fadeInUp} delay={100} duration={600} triggerOnce>
-                      <h4 className="">Sell your NFT's</h4>
+                      <h4 className="">More...</h4>
                     </Reveal>
                     <Reveal className='onStep' keyframes={fadeInUp} delay={200} duration={600} triggerOnce>
-                      <p className="">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.</p>
+                      <p className="">Trade on-chain assets, construct mines to earn, combat with fleets... All in MetaverseX: Frontier.</p>
                     </Reveal>
                   </div>
-                  <i className="wm icon_tags_alt"></i>
+                  <i className="wm icon_genius"></i>
               </div>
           </div>
         </div>
