@@ -1,8 +1,8 @@
 {
     "nftName":{
-        "0":"NFT - 200 Aurics", 
-        "1":"NFT - DECODER α",
-        "2":"NFT - 1 Credit Token"
+        "0":"200 Aurics", 
+        "1":"DECODER α",
+        "2":"1 Credit Token"
     },
     "nftCategory":{
         "0":"token_convertible",
