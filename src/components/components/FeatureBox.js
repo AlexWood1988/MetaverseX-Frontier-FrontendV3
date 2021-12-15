@@ -30,7 +30,6 @@ const featurebox= () => (
                         <p className="">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.</p>
                       </Reveal>
                     </div>
-                    <i className="wm icon_wallet"></i>
                 </div>
             </div>
 
