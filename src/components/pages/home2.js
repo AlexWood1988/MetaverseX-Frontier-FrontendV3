@@ -1,5 +1,4 @@
 import React from 'react';
-import Particle from '../components/Particle';
 import SliderMainParticle from '../components/SliderMainParticle';
 import FeatureBox from '../components/FeatureBox';
 import Footer from '../components/footer';
@@ -111,7 +110,6 @@ const homeone= () => (
   <div>
   <GlobalStyles />
       <section className="jumbotron no-bg" style={{backgroundImage: `url(${'./img/background/8.jpg'})`}}>
-       <Particle/>
          <SliderMainParticle/>
       </section>
 
