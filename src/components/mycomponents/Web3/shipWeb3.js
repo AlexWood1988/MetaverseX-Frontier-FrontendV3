@@ -2,7 +2,6 @@ import Web3 from "web3";
 import * as constants from "../constants/contracts.json";
 import shipFactoryContractAbi from "./abi/ShipFactory.json";
 import shipHelperContractAbi from "./abi/ShipHelper.json";
-import auContractAbi from "./abi/TokenContract1.json";
 import shipInfo from "../constants/shipInfo.json";
 
 const ShipWeb3 = {
@@ -12,14 +11,11 @@ const ShipWeb3 = {
                 window.web3 = new Web3(window.ethereum);
                 const shipFactoryContract = constants.shipFactoryContract;
                 const shipHelperContract = constants.shipHelperContract;
-                const auContract = constants.auContract;
                 // init contract
                 window.shipFactoryContract = new window.web3.eth.Contract(shipFactoryContractAbi.abi, shipFactoryContract);
                 //console.log("shipFactoryContract",window.shipFactoryContract);
                 window.shipHelperContract = new window.web3.eth.Contract(shipHelperContractAbi.abi, shipHelperContract);
                 //console.log("shipHelperContract",window.shipHelperContract);
-                window.auContract = new window.web3.eth.Contract(auContractAbi.abi, auContract);
-                //console.log("auContract",window.auContract);
                 // get default eth address
                 window.defaultAccount = accounts[0];
                 resolve(true);
@@ -77,20 +73,20 @@ const ShipWeb3 = {
         })
     },
 
-    approveAllAuForShipHelper(){
+    //付费升级
+    payToLevelUp(shipId){
         return new Promise((resolve, reject) => {
-            window.auContract.methods.approve(constants.shipHelperContract, "10000000000000000000000000000000000").send({from: window.defaultAccount})
+            window.shipHelperContract.methods.levelUpByFee(shipId).send({from: window.defaultAccount})
             .then(result => {
                 resolve(result);
             })
         })
     },
 
-    //付费升级
-    payToLevelUp(shipId){
+    getApprovalAllShipForMine(){
         return new Promise((resolve, reject) => {
-            window.shipHelperContract.methods.levelUpByFee(shipId).send({from: window.defaultAccount})
-            .then(result => {
+            window.shipFactoryContract.methods.isApprovedForAll(window.defaultAccount, 
+                constants.mineFactoryContract).call().then(result => {
                 resolve(result);
             })
         })

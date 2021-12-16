@@ -19,6 +19,15 @@ const TokenWeb3 = {
         })
     },
 
+    getAuApproveForShipHelper(){
+        return new Promise((resolve, reject) => {
+            window.auContract.methods.allowance(window.defaultAccount, constants.shipHelperContract).call().then(re => {
+                if (Number(re.substring(0, re.length-18)) >= 100000000000) resolve(true);
+                else resolve(false);
+            })
+        })
+    },
+
     approveAllAuForShipHelper(){
         return new Promise((resolve, reject) => {
             window.auContract.methods.approve(constants.shipHelperContract, "10000000000000000000000000000000000").send({from: window.defaultAccount})

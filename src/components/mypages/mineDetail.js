@@ -20,7 +20,8 @@ class MineDetail extends React.Component {
             ships:[],
             allships:[],
             planetMultiplier:'0',
-            simpleProfit: '0'
+            simpleProfit: '0',
+            allowance:false
         };
     }
 
@@ -28,6 +29,9 @@ class MineDetail extends React.Component {
         ShipWeb3.init().then(re=>{
             this.getShips();
             this.getAllShips();
+            ShipWeb3.getApprovalAllShipForMine().then(re => {
+                this.setState({allowance: re});
+            })
         })
         PlanetWeb3.init().then(re=>{
             this.getPlanetMultiplier();
@@ -163,11 +167,22 @@ class MineDetail extends React.Component {
                                        </div>
                                     }
 
-                                    <ul className="de_nav">
-                                        <li id='Mainbtn' className="pv2"><span onClick={this.approveAllShip}>Approve Ship</span></li>
-                                        <AddShipPopup ships={this.state.allships} addShip={this.addShip}/>
-                                        <RemoveShipPopup ships={this.state.ships} removeShip={this.removeShip}/>
-                                    </ul>
+                                    {
+                                        this.state.allowance
+                                        ?
+                                        <ul className="de_nav">
+                                            <AddShipPopup ships={this.state.allships} addShip={this.addShip}/>
+                                            <RemoveShipPopup ships={this.state.ships} removeShip={this.removeShip}/>
+                                        </ul>
+                                        :
+                                        <div>
+                                            <p>WARNING: Before add ships to this mine, you need to approve your ships.</p>
+                                            <ul className="de_nav">
+                                                <li id='Mainbtn' className="pv2"><span onClick={this.approveAllShip}>Approve Ship</span></li>
+                                            </ul>
+                                        </div>
+                                    }
+
                                 </div>
 
                                 <div className="col-md-5">

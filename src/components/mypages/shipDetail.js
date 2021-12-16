@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 import { AiFillDashboard, AiOutlineSketch, AiFillThunderbolt } from "react-icons/ai";
 import ShipWeb3 from "../mycomponents/Web3/shipWeb3";
 import shipInfo from "../mycomponents/constants/shipInfo.json";
+import TokenWeb3 from "../mycomponents/Web3/tokenWeb3";
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
@@ -15,7 +16,8 @@ class ShipDetail extends React.Component {
     constructor(props){
         super(props);
         this.state={
-            attribute:{}
+            attribute:{},
+            approve:false
         }
     }
 
@@ -23,6 +25,9 @@ class ShipDetail extends React.Component {
         const that = this
         ShipWeb3.init().then(re=>{
             that.getAttribute();
+        });
+        TokenWeb3.init().then(re=>{
+            that.getAuApporve();
         });
     }
 
@@ -39,12 +44,22 @@ class ShipDetail extends React.Component {
         }
     }
 
+    getAuApporve = () => {
+        TokenWeb3.getAuApproveForShipHelper().then(re => {
+            this.setState({approve: re});
+        })
+    }
+
     approveAu(){
-        ShipWeb3.approveAllAuForShipHelper().then(re=>{});
+        TokenWeb3.approveAllAuForShipHelper().then(re=>{});
     }
 
     levelUp= () => {
         ShipWeb3.payToLevelUp(this.props.ship.id).then(re=>{});
+    }
+
+    repairShip = () => {
+        console.log("repair ship");
     }
 
     render(){
@@ -86,11 +101,22 @@ class ShipDetail extends React.Component {
                             <div className="row">
                                 <div className="col-md-6">
 
-                                    <ul className="de_nav">
-                                        <li id='Mainbtn1' className=''><span onClick={this.approveAu}>Approve AU</span></li>
-                                        <li id='Mainbtn' className="active"><span onClick={this.levelUp}>Level UP</span></li>
-                                        <li id='Mainbtn1' className=''><span onClick={this.approveAu}>Repair</span></li>
-                                    </ul>
+                                    {
+                                        this.state.approve 
+                                        ? 
+                                        <ul className="de_nav">
+                                            <li id='Mainbtn' className="active"><span onClick={this.levelUp}>Level UP</span></li>
+                                            <li id='Mainbtn1' className=''><span onClick={this.repairShip}>Repair</span></li>
+                                        </ul>
+                                        :
+                                        <div> 
+                                            <p> WARNING: Before level up, you need to approve your AU.</p>
+                                            <ul className="de_nav">
+                                                <li id='Mainbtn1' className=''><span onClick={this.approveAu}>Approve AU</span></li>
+                                                <li id='Mainbtn1' className=''><span onClick={this.repairShip}>Repair</span></li>
+                                            </ul>
+                                        </div>
+                                    }
 
                                     <div className="p_list">
                                         <div className="p_list_pp">
