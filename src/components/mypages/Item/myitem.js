@@ -92,7 +92,7 @@ class MyItem extends React.Component {
                             <div className="d_profile">
                                 <div className="profile_name">
                                     <h4 className='tl'>
-                                        Item:                                              
+                                        Item                                        
                                         <div className="clearfix"></div>
                                         <span id="wallet" className='f6'>Blind boxes, Awards</span>
                                     </h4>

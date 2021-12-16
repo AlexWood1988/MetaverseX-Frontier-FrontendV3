@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
-import { AiFillDashboard, AiOutlineSketch, AiFillThunderbolt } from "react-icons/ai";
+import { AiFillDashboard, AiOutlineSketch } from "react-icons/ai";
 import ShipWeb3 from "../mycomponents/Web3/shipWeb3";
 import shipInfo from "../mycomponents/constants/shipInfo.json";
 import TokenWeb3 from "../mycomponents/Web3/tokenWeb3";
@@ -80,11 +80,9 @@ class ShipDetail extends React.Component {
                             <div className="item_info_counts">
                                 <div className="item_info_type"><AiFillDashboard size={20} className='pr1'/>{this.props.ship.category}</div>
                                 <div className="item_info_views"><AiOutlineSketch size={20} className='pr1'/>{this.props.ship.rarity}</div>
-                                <div className="item_info_like"><AiFillThunderbolt size={20} className='pr1'/>Lv.{this.props.ship.level}</div>
                             </div>
                             <p>The SpaceX Dragon, also known as Dragon 1 or Cargo Dragon, was a class of partially reusable cargo spacecraft developed by SpaceX, an American private space transportation company. Dragon was launched into orbit by the company's Falcon 9 launch vehicle to resupply the International Space Station (ISS). It is now superseded by SpaceX Dragon 2.</p>
         
-                            <h6>Current Status</h6>
                             <div className="item_author">                                    
                                 <div className="author_list_pp">
                                     <span>
@@ -92,7 +90,7 @@ class ShipDetail extends React.Component {
                                     </span>
                                 </div>                                    
                                 <div className="author_list_info">
-                                    <span>Mining in Planet 013</span>
+                                    <span>Status: Idle</span>
                                 </div>
                             </div>
         
@@ -160,6 +158,12 @@ class ShipDetail extends React.Component {
                                     <span className="filter__r">{shipInfo.mainAttribute[`${this.props.ship.category}`]}/{shipInfo.secondAttribute[`${this.props.ship.category}`]}</span>
                                     <div className="spacer-half"></div>
                                     <div className="clearfix"></div>
+                                    <ul className="activity-filter">
+                                        <div className="tc pv2">
+                                            <li><img className="mh2" alt="fire" width="25" src="./img/myicons/level.png"/>Level: {this.props.ship.level}</li>
+                                        </div>
+                                    </ul>
+
                                     <ul className="activity-filter">
                                         <li><img className="mh2" alt="fire" width="25" src="./img/myicons/fire.png"/>FIRE: {this.state.attribute[0]}</li>
                                         <li><img className="mh2" alt="en" width="23" src="./img/myicons/en.png"/>EN: {this.state.attribute[1]}</li>
