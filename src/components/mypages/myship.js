@@ -63,7 +63,7 @@ class MyShip extends React.Component {
         } else {
             return (<div>
                 <GlobalStyles/>
-                <section className='mt3 container d_coll no-bottom mh4'>
+                <section className='container d_coll no-bottom'>
                     <div className='row'>
                         <div className="col-md-12">
                             <div className="d_profile">
@@ -78,14 +78,16 @@ class MyShip extends React.Component {
                         </div>
                     </div>
                 </section>
-    
-                <div className='row pa4'>
-                    {
-                        this.state.ships.map((ship, i) => {
-                            return <ShipCard className='col-md-3 pa3' ship={ship} key={i} openDetailShip={this.openDetailShip}/>;
-                        })
-                    }
-                </div>
+                
+                <section className='container no-top'>
+                    <div className='row'>
+                        {
+                            this.state.ships.map((ship, i) => {
+                                return <ShipCard className='col-md-3 pa3' ship={ship} key={i} openDetailShip={this.openDetailShip}/>;
+                            })
+                        }
+                    </div>
+                </section>
     
                 <Footer />
             </div>);

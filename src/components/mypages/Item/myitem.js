@@ -86,7 +86,7 @@ class MyItem extends React.Component {
         } else {
             return(<div>
                 <GlobalStyles/>
-                <section className='mt3 container d_coll no-bottom mh4'>
+                <section className='container d_coll no-bottom'>
                     <div className='row'>
                         <div className="col-md-12">
                             <div className="d_profile">
@@ -102,30 +102,32 @@ class MyItem extends React.Component {
                     </div>
                 </section>
 
-                <div className='row ph4 pv2'>
-                    {
-                        this.state.nfts.map((nftArray, i) => {
-                            return nftArray.map((nft, k) => {
-                                const _nft = {
-                                    tokenId:nft,
-                                    contractId:i,
-                                    contract:`${constants.nftContracts[i]}`,
-                                    category:itemInfo.nftCategory[`${i}`],
-                                    img:`./img/nfts/0${i}.jpg`,
-                                    name: itemInfo.nftName[`${i}`],
-                                    reward: itemInfo.nftReward[`${i}`]
-                                }
-                                return <ItemCard className='col-md-2 pa2' nft={_nft} key={k} openDetailNft={this.openDetailNft}/>;
+                <section className='container no-top'>
+                    <div className='row'>
+                        {
+                            this.state.nfts.map((nftArray, i) => {
+                                return nftArray.map((nft, k) => {
+                                    const _nft = {
+                                        tokenId:nft,
+                                        contractId:i,
+                                        contract:`${constants.nftContracts[i]}`,
+                                        category:itemInfo.nftCategory[`${i}`],
+                                        img:`./img/nfts/0${i}.jpg`,
+                                        name: itemInfo.nftName[`${i}`],
+                                        reward: itemInfo.nftReward[`${i}`]
+                                    }
+                                    return <ItemCard className='col-md-2 pa2' nft={_nft} key={k} openDetailNft={this.openDetailNft}/>;
+                                })
                             })
-                        })
-                    }
-                    {
-                        this.state.blindboxContracts.map((contract, i) => {
-                            if (Number(contract.balance) > 0) return <BlindboxCard className='col-md-2 pa2' blindbox={Object.assign({},contract,{category:'blindbox'})} key={i} openDetailNft={this.openDetailNft}/>;
-                            else return <div className={`nouse-nouse${i}`}>  </div>
-                        })
-                    }
-                </div>
+                        }
+                        {
+                            this.state.blindboxContracts.map((contract, i) => {
+                                if (Number(contract.balance) > 0) return <BlindboxCard className='col-md-2 pa2' blindbox={Object.assign({},contract,{category:'blindbox'})} key={i} openDetailNft={this.openDetailNft}/>;
+                                else return <div className={`nouse-nouse${i}`}>  </div>
+                            })
+                        }
+                    </div>
+                </section>
 
                 <Footer />
             </div>)

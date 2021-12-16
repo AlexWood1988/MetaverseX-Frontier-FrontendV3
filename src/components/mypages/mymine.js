@@ -69,7 +69,7 @@ class MyMine extends React.Component {
         } else {
             return(<div>
                 <GlobalStyles/>
-                <section className='mt3 container d_coll no-bottom mh4'>
+                <section className='container d_coll no-bottom'>
                     <div className='row'>
                         <div className="col-md-12">
                             <div className="d_profile">
@@ -85,13 +85,15 @@ class MyMine extends React.Component {
                     </div>
                 </section>
 
-                <div className='row pa4'>
-                    {
-                        this.state.mines.map((mine, i) => {
-                            return <MineCard className='col-md-3 pa3' mine={mine} key={i} openDetailMine={this.openDetailMine}/>;
-                        })
-                    }
-                </div>
+                <section className='container no-top'>
+                    <div className='row'>
+                        {
+                            this.state.mines.map((mine, i) => {
+                                return <MineCard className='col-md-3 pa3' mine={mine} key={i} openDetailMine={this.openDetailMine}/>;
+                            })
+                        }
+                    </div>
+                </section>
 
                 <Footer />
             </div>)

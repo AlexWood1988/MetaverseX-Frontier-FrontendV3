@@ -75,7 +75,8 @@ class MyPlanet extends React.Component {
         } else {
             return(<div>
                 <GlobalStyles/>
-                <section className='mt3 container d_coll no-bottom mh4'>
+
+                <section className='container d_coll no-bottom'>
                     <div className='row'>
                         <div className="col-md-12">
                             <div className="d_profile">
@@ -91,13 +92,15 @@ class MyPlanet extends React.Component {
                     </div>
                 </section>
 
-                <div className='row pa4'>
-                    {
-                        this.state.planets.map((planet, i) => {
-                            return <PlanetCard className='col-md-3 pa3' planet={planet} key={i} openDetailPlanet={this.openDetailPlanet}/>;
-                        })
-                    }
-                </div>
+                <section className='container no-top'>
+                    <div className='row'>
+                        {
+                            this.state.planets.map((planet, i) => {
+                                return <PlanetCard className='col-md-3 pa3' planet={planet} key={i} openDetailPlanet={this.openDetailPlanet}/>;
+                            })
+                        }
+                    </div>
+                </section>
 
                 <Footer />
             </div>)
