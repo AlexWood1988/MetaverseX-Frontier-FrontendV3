@@ -37,8 +37,6 @@ class PlanetDetail extends React.Component {
                                 <div className="item_info_views"><AiOutlineSketch size={20} className='pr1'/>{this.props.planet.rarity}</div>
                                 <div className="item_info_like"><AiFillThunderbolt size={20} className='pr1'/>In Peace</div>
                             </div>
-                            <p>The SpaceX Dragon, also known as Dragon 1 or Cargo Dragon, was a class of partially reusable cargo spacecraft developed by SpaceX, an American private space transportation company. Dragon was launched into orbit by the company's Falcon 9 launch vehicle to resupply the International Space Station (ISS). It is now superseded by SpaceX Dragon 2.</p>
-
                             <div className="spacer-20"></div>
 
                             <div className="p_list">

@@ -47,7 +47,6 @@ class BlindboxDetail extends React.Component {
                             Amount: {this.props.blindbox.balance}
                             <h2>{this.props.blindbox.name}</h2>
                             <div className="spacer-20"></div>
-                            <p>Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79, making it one of the higher atomic number elements that occur naturally. In a pure form, it is a bright, slightly reddish yellow, dense, soft, malleable, and ductile metal. Chemically, gold is a transition metal and a group 11 element. It is one of the least reactive chemical elements and is solid under standard conditions.</p>
                             <div className="spacer-20"></div>
                             <div className="item_author">                                    
                                 <div className="author_list_pp">

@@ -104,11 +104,11 @@ class MineDetail extends React.Component {
         
                     <div className="col-md-8">
                         <div className="item_info">
-                            (x)Galaxy: Official Public 1
+                            Galaxy: Official Public 1
                             <h2>No.{this.props.mine.id} Mine in {this.props.mine.planet.name}</h2>
-                            <p>(x)The SpaceX Dragon, also known as Dragon 1 or Cargo Dragon, was a class of partially reusable cargo spacecraft developed by SpaceX, an American private space transportation company. Dragon was launched into orbit by the company's Falcon 9 launch vehicle to resupply the International Space Station (ISS). It is now superseded by SpaceX Dragon 2. Click on the ship to remove it.</p>
 
-                            <div className="spacer-10"></div>
+                            <div className="spacer-40"></div>
+                            <div className="spacer-40"></div>
                             <div className="row">
                                 <div className="col-md-6">
 
