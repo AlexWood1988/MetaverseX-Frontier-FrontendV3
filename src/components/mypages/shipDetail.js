@@ -123,8 +123,8 @@ class ShipDetail extends React.Component {
                                             </span>
                                         </div>                                    
                                         <div className="p_list_info">
-                                            Next level costs <b>{shipInfo.levelUpFee[Number(`${this.props.ship.level}`)+1]} AU</b>
-                                            <span>To get <b>X{shipInfo.levelUpMultiplier[Number(`${this.props.ship.level}`)+1]}</b> mining multiplier</span>
+                                            Next level: <b>{shipInfo.levelUpFee[Number(`${this.props.ship.level}`)+1]} AU</b>
+                                            <span>Next Multiplier: <b>X{shipInfo.levelUpMultiplier[Number(`${this.props.ship.level}`)+1]}</b></span>
                                         </div>
                                     </div>
 
@@ -136,7 +136,7 @@ class ShipDetail extends React.Component {
                                         </div>                                    
                                         <div className="p_list_info">
                                             Durability: <b>{this.props.ship.dur}/{this.state.attribute[6]}</b>
-                                            <span>Repair needs <b>8000 AU</b></span>
+                                            <span>Repair Cost: <b>8000 AU</b></span>
                                         </div>
                                     </div>
 
@@ -148,7 +148,7 @@ class ShipDetail extends React.Component {
                                         </div>                                    
                                         <div className="p_list_info">
                                             HP: <b>{this.props.ship.hp}/{this.state.attribute[5]}</b>
-                                            <span>Repair needs <b>98000 AU</b></span>
+                                            <span>Repair Cost: <b>98000 AU</b></span>
                                         </div>
                                     </div>
                                 </div>
@@ -170,7 +170,7 @@ class ShipDetail extends React.Component {
                                         <li><img className="mh2" alt="hack" width="25" src="./img/myicons/hack.png"/>HACK: {this.state.attribute[2]}</li>
                                         <li><img className="mh2" alt="def" width="25" src="./img/myicons/def.png"/>DEF: {this.state.attribute[3]}</li>
                                         <li><img className="mh2" alt="agl" width="25" src="./img/myicons/agl.png"/>AGL: {this.state.attribute[4]}</li>
-                                        <li><img className="mh2" alt="mining" width="25" src="./img/myicons/multiplier.png"/>Mining: X{shipInfo.levelUpMultiplier[`${this.props.ship.level}`]}</li>
+                                        <li><img className="mh2" alt="mining" width="25" src="./img/myicons/multiplier.png"/> {shipInfo.levelUpMultiplier[`${this.props.ship.level}`]}X</li>
                                     </ul>
                                 </div>   
                             </div>   

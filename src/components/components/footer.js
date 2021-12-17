@@ -70,7 +70,7 @@ const footer= () => (
                             <div className="de-flex">
                                 <div className="de-flex-col">
                                     <span onClick={()=> window.open("", "_self")}>
-                                        <span className="copy">&copy; Copyright 2021 - MetaverseX Project</span>
+                                        <span className="copy">&copy; Copyright 2021 - MetaverseX: Frontier Project</span>
                                     </span>
                                 </div>
                             </div>

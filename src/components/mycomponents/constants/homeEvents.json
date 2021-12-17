@@ -4,37 +4,25 @@
             "banner":"./img/events/1.png",
             "avatar":"./img/events/a1.png",
             "username":"Reward",
-            "unique_id":"MetaverseX Official Event"
-        },
-        {
-            "banner":"./img/events/3.png",
-            "avatar":"./img/events/a3.png",
-            "username":"Team",
-            "unique_id":"MetaverseX Team"
-        },
-        {
-            "banner":"./img/events/4.png",
-            "avatar":"./img/events/a4.png",
-            "username":"Whitelist",
-            "unique_id":"MetaverseX Frontier Whitelist"
-        },
-        {
-            "banner":"./img/events/5.png",
-            "avatar":"./img/events/a5.png",
-            "username":"Recruit",
-            "unique_id":"MetaverseX Official Event"
-        },
-        {
-            "banner":"./img/events/6.png",
-            "avatar":"./img/events/a6.png",
-            "username":"Roadmap",
-            "unique_id":"MetaverseX Dev Roadmap"
+            "unique_id":"Official Event"
         },
         {
             "banner":"./img/events/2.png",
             "avatar":"./img/events/a2.png",
-            "username":"Recruit",
-            "unique_id":"MetaverseX Official Event"
+            "username":"Whitelist",
+            "unique_id":"Official Event"
+        },
+        {
+            "banner":"./img/events/3.png",
+            "avatar":"./img/events/a3.png",
+            "username":"Campaign",
+            "unique_id":"Marketing Campaign"
+        },
+        {
+            "banner":"./img/events/4.png",
+            "avatar":"./img/events/a4.png",
+            "username":"Extra Yield",
+            "unique_id":"MetaverseX: Frontier Closed Beta"
         }
     ]
 }

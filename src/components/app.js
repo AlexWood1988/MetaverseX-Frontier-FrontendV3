@@ -38,6 +38,7 @@ import MyItem from './mypages/Item/myitem';
 import MyPlanet from './mypages/myplanet';
 import MyMine from './mypages/mymine';
 import InDev from './mypages/indev';
+import TestFaucet from './mypages/test/testfaucet';
 
 import { createGlobalStyle } from 'styled-components';
 
@@ -108,6 +109,7 @@ const app= () => (
         <MyPlanet path="/myplanet" />
         <MyMine path="/mymine" />
         <InDev path="/indev" />
+        <TestFaucet path="/testfaucet" />
 
         </ScrollTop>
       </PosedRouter>

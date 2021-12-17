@@ -113,6 +113,8 @@ const homeone= () => (
          <SliderMainParticle/>
       </section>
 
+      {/*
+
       <section className='container no-bottom'>
         <div className="row">
             <div className="col-lg-2 col-sm-4 col-6 mb30">
@@ -158,6 +160,8 @@ const homeone= () => (
             </div>                                       
         </div>
       </section>
+
+      */}
 
       <section className='container no-top no-bottom'>
         <div className='row'>
