@@ -9,12 +9,10 @@ const footer= () => (
                         <div className="widget">
                             <h5>MetaverseX</h5>
                             <ul>
+                                <li><Link to="">Homepage</Link></li>
+                                <li><Link to="">Asset Management</Link></li>
                                 <li><Link to="">Marketplace</Link></li>
-                                <li><Link to="">Combat</Link></li>
-                                <li><Link to="">Leaderboard</Link></li>
-                                <li><Link to="">Game News</Link></li>
-                                <li><Link to="">New Events</Link></li>
-                                <li><Link to="">Collectibles</Link></li>
+                                <li><Link to="">Combat Zone</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -22,12 +20,9 @@ const footer= () => (
                         <div className="widget">
                             <h5>Resources</h5>
                             <ul>
+                                <li><Link to="">White Paper</Link></li>
+                                <li><Link to="">Roadmap</Link></li>
                                 <li><Link to="">Help Center</Link></li>
-                                <li><Link to="">Partners</Link></li>
-                                <li><Link to="">Suggestions</Link></li>
-                                <li><Link to="">Whitepaper</Link></li>
-                                <li><Link to="">Guidebook</Link></li>
-                                <li><Link to="">Docs</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -35,12 +30,9 @@ const footer= () => (
                         <div className="widget">
                             <h5>Community</h5>
                             <ul>
-                                <li><Link to="">Mailing List</Link></li>
-                                <li><Link to="">Telegram</Link></li>
                                 <li><Link to="">Twitter</Link></li>
-                                <li><Link to="">Discord</Link></li>
+                                <li><Link to="">Telegram</Link></li>
                                 <li><Link to="">Forum</Link></li>
-                                <li><Link to="">Blog</Link></li>
                             </ul>
                         </div>
                     </div>

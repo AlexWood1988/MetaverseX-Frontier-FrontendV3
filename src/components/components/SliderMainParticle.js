@@ -37,7 +37,7 @@ const slidermainparticle= () => (
               </Reveal>
               <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
               <p className="lead col-white">
-              Live Metaverse. Build fleets, battle & loot resources. Claim celestial bodies & galaxies.
+              Navigate a live metaverse. Build fleets, battle & loot resources. Claim celestial bodies & galaxies.
               </p>
               </Reveal>
               <div className="spacer-10"></div>
