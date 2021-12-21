@@ -30,7 +30,7 @@ class PlanetDetail extends React.Component {
         
                     <div className="col-md-8">
                         <div className="item_info">
-                            Galaxy: Official Public 1
+                            Public Territory: Pacificus
                             <h2>{this.props.planet.name}</h2>
                             <div className="item_info_counts">
                                 <div className="item_info_type"><AiFillDashboard size={20} className='pr1'/>ID: {this.props.planet.id}</div>
