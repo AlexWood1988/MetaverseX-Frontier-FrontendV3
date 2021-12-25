@@ -123,7 +123,7 @@ class MyItem extends React.Component {
                         {
                             this.state.blindboxContracts.map((contract, i) => {
                                 if (Number(contract.balance) > 0) return <BlindboxCard className='col-md-2 pa2' blindbox={Object.assign({},contract,{category:'blindbox'})} key={i} openDetailNft={this.openDetailNft}/>;
-                                else return <div className={`nouse-nouse${i}`}>  </div>
+                                else return i === -1 ? "" : "";
                             })
                         }
                     </div>

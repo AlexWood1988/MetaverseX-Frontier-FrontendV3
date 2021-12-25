@@ -19,6 +19,7 @@ class BlindboxDetail extends React.Component {
     }
 
     componentDidMount = () => {
+        console.log("index",this.props.blindbox.index);
         BlindboxWeb3.init().then(re => {
             BlindboxWeb3.getApprovedToBlindboxManager(this.props.blindbox.index).then(re2 => {
                 this.setState({allowance: re2});

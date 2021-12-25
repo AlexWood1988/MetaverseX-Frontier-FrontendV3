@@ -15,6 +15,13 @@ const BlindboxWeb3 = {
                 window.blindboxContracts = [];
                 window.blindboxContracts[0] = new window.web3.eth.Contract(blindboxAbi.abi, constants.blindboxesContract[0]);
                 window.blindboxContracts[1] = new window.web3.eth.Contract(blindboxAbi.abi, constants.blindboxesContract[1]);
+                window.blindboxContracts[2] = new window.web3.eth.Contract(blindboxAbi.abi, constants.blindboxesContract[2]);
+                window.blindboxContracts[3] = new window.web3.eth.Contract(blindboxAbi.abi, constants.blindboxesContract[3]);
+                window.blindboxContracts[4] = new window.web3.eth.Contract(blindboxAbi.abi, constants.blindboxesContract[4]);
+                window.blindboxContracts[5] = new window.web3.eth.Contract(blindboxAbi.abi, constants.blindboxesContract[5]);
+                window.blindboxContracts[6] = new window.web3.eth.Contract(blindboxAbi.abi, constants.blindboxesContract[6]);
+                window.blindboxContracts[7] = new window.web3.eth.Contract(blindboxAbi.abi, constants.blindboxesContract[7]);
+                window.blindboxContracts[8] = new window.web3.eth.Contract(blindboxAbi.abi, constants.blindboxesContract[8]);
                 window.defaultAccount = accounts[0];
                 resolve(true);
             })
