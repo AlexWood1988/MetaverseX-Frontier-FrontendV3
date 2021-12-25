@@ -28,7 +28,6 @@ class BlindboxDetail extends React.Component {
     }
 
     approveToManager = () => {
-        console.log("index",this.props.blindbox.index)
         BlindboxWeb3.setApprovalToBlindboxManager(this.props.blindbox.index).then(re=>{});
     }
 

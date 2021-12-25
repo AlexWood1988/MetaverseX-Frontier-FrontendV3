@@ -37,7 +37,7 @@ class UseItemButton extends React.Component {
         return (
             <div>
             <ul className="de_nav">
-                <li id='Mainbtn' className="active"><span onClick={this.handleClickOpen}>Open Blindbox</span></li>
+                <li id='Mainbtn' className="active"><span onClick={this.handleClickOpen}>Open Blind Box</span></li>
             </ul>
             <Dialog open={this.state.open} onClose={this.handleClose} aria-labelledby="form-dialog-title">
                 <DialogTitle id="form-dialog-title"><p className='f3 black'>Open Blindbox</p></DialogTitle>
