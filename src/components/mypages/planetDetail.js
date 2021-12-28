@@ -37,7 +37,18 @@ class PlanetDetail extends React.Component {
                                 <div className="item_info_views"><AiOutlineSketch size={20} className='pr1'/>{this.props.planet.rarity}</div>
                                 <div className="item_info_like"><AiFillThunderbolt size={20} className='pr1'/>In Peace</div>
                             </div>
-                            <div className="spacer-20"></div>
+                            <div className="spacer-10"></div>
+                            <div className="item_author">                                    
+                                <div className="p_list_pp">
+                                    <span>
+                                        <img className="lazy" src="./img/myicons/status.png" alt=""/>
+                                    </span>
+                                </div>                                    
+                                <div className="author_list_info">
+                                    <span>Au Amount: {this.props.planet.auAmount} AU</span>
+                                </div>
+                            </div>
+                            <div className="spacer-40"></div>
 
                             <div className="p_list">
                                 <div className="p_list_pp">

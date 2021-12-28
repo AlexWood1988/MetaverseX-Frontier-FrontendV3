@@ -94,7 +94,7 @@ class MyItem extends React.Component {
                                     <h4 className='tl'>
                                         Item                                        
                                         <div className="clearfix"></div>
-                                        <span id="wallet" className='f6'>Blind boxes, Rewards</span>
+                                        <span id="wallet" className='f6'>Blind Boxes & Rewards</span>
                                     </h4>
                                 </div>
                             </div>

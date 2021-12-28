@@ -82,7 +82,7 @@ class MyPlanet extends React.Component {
                             <div className="d_profile">
                                 <div className="profile_name">
                                     <h4 className='tl'>
-                                        Planet                                         
+                                        Celestial Body                                         
                                         <div className="clearfix"></div>
                                         <span id="wallet" className='f6'>Number: {this.state.planetCount}</span>
                                     </h4>

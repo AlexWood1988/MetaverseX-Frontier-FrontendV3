@@ -37,7 +37,7 @@ class TestFaucet extends React.Component {
 
                 <ul className="de_nav">
                   <li id='Mainbtn1' className=''><span onClick={this.getmxc}>Get 1000 MXC</span></li>
-                  <li id='Mainbtn1' className=''><span onClick={this.getau}>Get 1000000 AU</span></li>
+                  {/*<li id='Mainbtn1' className=''><span onClick={this.getau}>Get 1000000 AU</span></li>*/}
               </ul>
           </div>
         </div>
